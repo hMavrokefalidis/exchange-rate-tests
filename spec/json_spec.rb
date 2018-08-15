@@ -21,4 +21,7 @@ describe 'executing test regarding exchange rates compared to euro' do
     expect(@currency.get_number_of_currencies).to eq(31)
   end
 
+  it "Checking if all the values are floats" do
+    expect(@currency.get_exchange_rate_values).to all(be_a(Float))
+  end
 end

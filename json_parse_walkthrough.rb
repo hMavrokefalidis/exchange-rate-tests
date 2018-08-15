@@ -22,6 +22,10 @@ class ParseJSON
   def get_number_of_currencies
     @json_file["rates"].length
   end
+
+  def get_exchange_rate_values
+    @json_file["rates"].values
+  end
 end
 
 json = ParseJSON.new("exchange_rates.json")
